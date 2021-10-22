@@ -1,10 +1,9 @@
-const {readAndAppend, readFromFile, } = require ('./helpers/fsUtils')
-const express = require('express');
+const {readAndAppend, readFromFile, readAndDelete } = require ('./helpers/fsUtils')
 const path = require('path');
-// const api = require('./routes/index.js');
 const uuid = require( './helpers/uuid')
+const express = require('express');
 const fs = require( 'fs');
-// const database = require('./db/db.json')
+
 
 const PORT = 3001;
 //add the bit needed for heroku when it is ready
@@ -36,32 +35,39 @@ app.get('/', (req, res) =>
   // GET Route for putting the notes into JSON
   app.get('/api/notes', (req, res) => {
    //can put a console log here
-  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
-  });
-  
-    
-    
-  // POST Route for the new note
-  app.post('/api/notes', (req, res) => {
+   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+});
+
+
+
+// POST Route for the new note
+app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
     console.log(req.body);
   
-    const { title, text, noteId } = req.body;
-  
+    const { title, text, id } = req.body;
+    
     if (title && text) {
     const newNote = {
         title,
         text,
-        noteId: uuid(),
+        id: uuid(), //the eye of Ethan it is just pulling id
     };
-  
+    
     readAndAppend(newNote, './db/db.json');
     res.json(`Note added 🚀`);
-    } else {
+} else {
     res.error('Error, note not added');
-    }
- });
+}
+});
 
+
+// DELETE Route for a specific tip //-------------from miniproject and working with William, Damien, and Ethan
+app.delete('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+    readAndDelete(noteId);
+    res.json(`shit got deleted `)    
+  });
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)

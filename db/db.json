@@ -1,21 +1,7 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "NOTES",
-        "text": "TEST",
-        "noteId": "92c2"
-    },
-    {
-        "title": "note",
-        "text": "test 2",
-        "noteId": "267f"
-    },
-    {
-        "title": "Note3",
-        "text": "test 3",
-        "noteId": "1ac3"
+        "title": "test",
+        "text": "delete",
+        "id": "8943"
     }
 ]

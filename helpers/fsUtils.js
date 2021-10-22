@@ -32,5 +32,21 @@ const readAndAppend = (content, file) => {
   });
 };
 
-// create a delete, export it 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+// create a delete, export it  
+const readAndDelete = (id) => {
+  readFromFile ('./db/db.json').then((data)=> {
+ 
+    const parsedData = JSON.parse(data);
+    parsedData.forEach(objthing => {
+      if (id == objthing.id) {
+        const index = parsedData.indexOf(objthing);            //worked through hard with Ethan,Willian, and Damien
+
+        parsedData.splice(index, 1);
+      }
+    })
+    writeToFile('./db/db.json', parsedData);
+  })
+  
+}
+
+module.exports = { readFromFile, writeToFile, readAndAppend, readAndDelete};
