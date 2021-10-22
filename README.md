@@ -1,2 +1,0 @@
-# 11BootCampHomeworkMR
-Note taker
