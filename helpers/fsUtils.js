@@ -39,12 +39,12 @@ const readAndDelete = (id) => {
     const parsedData = JSON.parse(data);
     parsedData.forEach(objthing => {
       if (id == objthing.id) {
-        const index = parsedData.indexOf(objthing);            //worked through hard with Ethan,Willian, and Damien
+        const index = parsedData.indexOf(objthing);            //worked through hard with help from Ethan,Willian, and Damien
 
         parsedData.splice(index, 1);
       }
     })
-    writeToFile('./db/db.json', parsedData);
+    writeToFile('./db/db.json', parsedData); //help mainly here!
   })
   
 }

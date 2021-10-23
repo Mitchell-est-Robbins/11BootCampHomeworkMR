@@ -40,10 +40,10 @@ app.get('/', (req, res) =>
 
 
 
-// POST Route for the new note
+// POST Route for the new note //from inclass activities 22 cited because it helps when teaching people
 app.post('/api/notes', (req, res) => {
-    console.info(`${req.method} request received to add a note`);
-    console.log(req.body);
+    // console.info(`${req.method} request received to add a note`);
+    // console.log(req.body);
   
     const { title, text, id } = req.body;
     
@@ -62,8 +62,8 @@ app.post('/api/notes', (req, res) => {
 });
 
 
-// DELETE Route for a specific tip //-------------from miniproject and working with William, Damien, and Ethan
-app.delete('/api/notes/:id', (req, res) => {
+// DELETE Route for a specific tip //-------------from miniproject and  with help from William, Damien, and Ethan
+app.delete('/api/notes/:id', (req, res) => { //missed a / after notes, thanks Ethan
     const noteId = req.params.id;
     readAndDelete(noteId);
     res.json(`shit got deleted `)    
