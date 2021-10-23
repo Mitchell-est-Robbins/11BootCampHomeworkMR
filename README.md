@@ -24,9 +24,8 @@
 ## **Description** 
 A persistent server based scheduling assistant with note creation and note deletion capabilities. 
 
---------
 
-https://watch.screencastify.com/v/ebeCgPNv81ITMhh6mmjx
+
 
 ---------
 
