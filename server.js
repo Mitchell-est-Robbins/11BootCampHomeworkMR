@@ -5,7 +5,7 @@ const express = require('express');
 const fs = require( 'fs');
 
 
-const PORT = process.env.port || 3001;
+const port = process.env.PORT || 3001;
 //add the bit needed for heroku when it is ready
 const app = express();
 
@@ -69,6 +69,6 @@ app.delete('/api/notes/:id', (req, res) => { //missed a / after notes, thanks Et
     res.json(`shit got deleted `)    
   });
 
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
+app.listen(port, () =>
+  console.log(`App listening at http://localhost:${port} 🚀`)
 );
