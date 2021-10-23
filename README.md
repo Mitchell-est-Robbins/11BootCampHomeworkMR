@@ -31,11 +31,11 @@ A persistent server based scheduling assistant with note creation and note delet
 
 ## **Screenshots:**
 
-![Screenshot 1 Landing](./pictures/landingpage.jpg)
+![Screenshot 1 Landing](pictures/landingpage.jpg)
 
 ---------------
 
-![Screenshot 2 Features](./pictures/instructions.jpg)
+![Screenshot 2 Features](pictures/instructions.jpg)
 
 A: Note Storage
 
