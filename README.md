@@ -1,5 +1,3 @@
-worked with Chuck, William, Damien, Brian, Ethan 10/21/21
-
 #  **Note Taker** 
 
 

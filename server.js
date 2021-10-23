@@ -5,7 +5,7 @@ const express = require('express');
 const fs = require( 'fs');
 
 
-const PORT = 3001;
+const PORT = process.env.port || 3001;
 //add the bit needed for heroku when it is ready
 const app = express();
 
@@ -51,7 +51,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
         title,
         text,
-        id: uuid(), //the eye of Ethan it is just pulling id
+        id: uuid(), 
     };
     
     readAndAppend(newNote, './db/db.json');
