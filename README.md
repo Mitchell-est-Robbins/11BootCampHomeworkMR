@@ -78,6 +78,3 @@ You cannot contribute
 ### https://github.com/VookmirVookmir
 
 ----------
-
-## **Ideas for improvement:**
-
